@@ -1,0 +1,66 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $color-secondary;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: $color-primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: color.adjust($color-primary, $lightness: -20%);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    font-size: 16px;
+    font-weight: 500;
+    color: $color-text;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+    cursor: pointer;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+
+  &__mobile-menu-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

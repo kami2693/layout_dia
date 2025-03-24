@@ -1,0 +1,44 @@
+.vision {
+  padding: 120px 0;
+  color: $color-secondary;
+  background-color: $color-primary;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../images/Shapes.png');
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 48px;
+    opacity: 0.8;
+  }
+
+  &__button {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: $color-secondary;
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -20%);
+    }
+  }
+}
