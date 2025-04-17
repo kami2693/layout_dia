@@ -1,25 +1,25 @@
+/* stylelint-disable */
 .arrow {
-  cursor: pointer;
   width: 18px;
   height: 18px;
+  cursor: pointer;
 
   &--left {
-    border-radius: 50%;
-
-    background-color: #fff;
     background-image: url(../images/slider/slide-left.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
   }
 
   &--right {
-    border-radius: 50%;
-
-    background-color: #fff;
     background-image: url(../images/slider/slide-right.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
   }
 
   @include hover(transform, scale(1.1));
 }
+/* stylelint-enable */

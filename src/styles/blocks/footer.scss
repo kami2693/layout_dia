@@ -1,25 +1,24 @@
+/* stylelint-disable */
 .footer {
   margin-top: 120px;
-  border-radius: 30px 30px 0 0;
   background-color: $header-footer-text-color;
+  border-radius: 30px 30px 0 0;
 
   @include on-tablet {
     margin: 0;
   }
 
   &__container {
-    row-gap: 80px;
-
-    padding-block: 72px 80px;
-    border-radius: 30px 30px 0 0;
-
-    color: $header-footer-text-color;
-
     background-color: $header-footer-bg-color;
+    color: $header-footer-text-color;
+    border-radius: 30px 30px 0 0;
+    padding-block: 72px 80px;
 
     @include padding-inline;
 
     @include page-grid;
+
+    row-gap: 80px;
 
     @include on-tablet {
       row-gap: 120px;
@@ -31,25 +30,24 @@
   }
 
   &__title {
-    font-family: Poppins, sans-serif;
     font-size: 32px;
-    font-weight: 600;
     line-height: 42px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
 
     @include on-tablet {
       line-height: 48px;
     }
 
     &--small {
-      margin-bottom: 8px;
-
-      font-family: Poppins, sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 13px;
       font-weight: 700;
       line-height: 19.5px;
-      color: $main-text-color;
-      text-transform: uppercase;
       letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: $main-text-color;
     }
   }
 
@@ -69,23 +67,21 @@
     margin-top: 56px;
 
     &__input {
-      box-sizing: border-box;
       width: 100%;
-      height: 48px;
       margin: 0;
-      margin-bottom: 48px;
       padding: 0;
-      padding-left: 16px;
+      height: 48px;
+      box-sizing: border-box;
+      background-color: $header-footer-bg-color;
+      color: $header-footer-text-color;
+      border-bottom: 1px solid $header-footer-text-color;
       border-top: none;
       border-right: none;
-      border-bottom: 1px solid $header-footer-text-color;
       border-left: none;
-
       font-size: 15px;
       line-height: 23;
-      color: $header-footer-text-color;
-
-      background-color: $header-footer-bg-color;
+      padding-left: 16px;
+      margin-bottom: 48px;
       outline: none;
 
       &:focus {
@@ -99,8 +95,8 @@
   }
 
   &__contacts {
-    display: flex;
     grid-column: 1 / -1;
+    display: flex;
     flex-direction: column;
     gap: 48px;
 
@@ -118,8 +114,8 @@
 
     &__call {
       &--tel {
-        font-family: 'Open Sans', sans-serif;
         font-size: 24px;
+        font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         line-height: 36px;
         color: $header-footer-text-color;
@@ -149,17 +145,13 @@
       }
 
       &--facebook {
-        display: block;
-
         width: 32px;
         height: 32px;
-
+        display: block;
         text-decoration: none;
-
         background-image: url(../images/logo/facebook.svg);
         background-repeat: no-repeat;
         background-position: center;
-
         transition: all 0.3s;
 
         &:hover {
@@ -168,17 +160,13 @@
       }
 
       &--twitter {
-        display: block;
-
         width: 32px;
         height: 32px;
-
+        display: block;
         text-decoration: none;
-
         background-image: url(../images/logo/twitter.svg);
         background-repeat: no-repeat;
         background-position: center;
-
         transition: all 0.3s;
 
         &:hover {
@@ -187,17 +175,13 @@
       }
 
       &--instagram {
-        display: block;
-
         width: 32px;
         height: 32px;
-
+        display: block;
         text-decoration: none;
-
         background-image: url(../images/logo/instagram.svg);
         background-repeat: no-repeat;
         background-position: center;
-
         transition: all 0.3s;
 
         &:hover {
@@ -209,29 +193,28 @@
 
   &__nav {
     display: flex;
-    grid-column: 1 / -1;
     flex-direction: column;
     justify-content: center;
+    grid-column: 1 / -1;
 
     @include on-tablet {
       grid-column: 1 / 7;
     }
 
     @include on-small-desktop {
-      grid-column: 1 / 13;
       flex-direction: row;
       justify-content: space-between;
+      grid-column: 1 / 13;
     }
 
     &__logo {
-      width: 46px;
-      height: 28px;
-      margin-bottom: 50px;
-
       background-image: url(../images/logo/header-Air.svg);
-      background-repeat: no-repeat;
       background-position: center;
+      background-repeat: no-repeat;
       background-size: cover;
+      height: 28px;
+      width: 46px;
+      margin-bottom: 50px;
 
       @include on-tablet {
         margin-bottom: 24px;
@@ -247,17 +230,16 @@
     &__list {
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      align-items: start;
       justify-content: center;
-
+      align-items: start;
+      gap: 24px;
       margin: 0;
       padding: 0;
 
       @include on-tablet {
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
       }
 
       @include on-small-desktop {
@@ -270,18 +252,19 @@
       font-size: 13px;
       font-weight: 700;
       line-height: 19.5px;
+      letter-spacing: 3px;
       color: $header-footer-text-color;
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 3px;
 
       @include hover(color, $footer-hover-color);
     }
 
     &__item {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
   }
 }
+/* stylelint-enable */

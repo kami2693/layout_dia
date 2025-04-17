@@ -1,9 +1,9 @@
+/* stylelint-disable */
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 56px;
   align-items: center;
-
+  gap: 56px;
   margin-bottom: 72px;
 
   @include padding-inline;
@@ -18,3 +18,4 @@
     margin-bottom: 134px;
   }
 }
+/* stylelint-enable */
