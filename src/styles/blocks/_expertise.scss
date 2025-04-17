@@ -1,0 +1,60 @@
+.expertise {
+  padding: 120px 0;
+  background-color: $color-accent;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &__description {
+    max-width: 800px;
+    margin-right: auto;
+    margin-bottom: 64px;
+    margin-left: auto;
+
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+
+  &__item {
+    padding: 40px;
+    border-radius: 8px;
+
+    background-color: $color-white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &__item-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: $color-text;
+  }
+}

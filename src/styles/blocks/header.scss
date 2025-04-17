@@ -1,66 +1,95 @@
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  box-sizing: border-box;
   width: 100%;
-  z-index: 100;
-  background-color: $color-secondary;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 30px 30px;
 
-  &__container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 24px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  background-color: $header-footer-bg-color;
 
-  &__logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: $color-primary;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  &__content {
+    margin-top: 28px;
 
-    &:hover {
-      color: color.adjust($color-primary, $lightness: -20%);
+    @include page-grid;
+
+    @include on-tablet {
+      margin-top: 36px;
+    }
+
+    @include on-small-desktop {
+      margin-top: 0;
     }
   }
 
-  &__nav {
-    display: flex;
-    gap: 32px;
-    align-items: center;
+  &__main {
+    grid-column: 1 / -1;
+    box-sizing: border-box;
 
-    @include onMobile {
-      display: none;
+    @include padding-inline;
+
+    @include on-tablet {
+      padding-top: 56px;
+    }
+
+    @include on-small-desktop {
+      grid-column: 1 / 6;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 7;
     }
   }
 
-  &__nav-item {
-    font-size: 16px;
-    font-weight: 500;
-    color: $color-text;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  &__title {
+    margin-bottom: 32px;
 
-    &:hover {
-      color: $color-primary;
+    font-family: Poppins, sans-serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 62.4px;
+    color: $header-footer-text-color;
+    text-align: left;
+    text-decoration-skip-ink: none;
+    text-underline-position: from-font;
+
+    @include on-tablet {
+      font-size: 64px;
+      line-height: 68px;
+    }
+
+    @include on-small-desktop {
+      letter-spacing: 1px;
     }
   }
 
-  &__mobile-menu {
-    display: none;
-    cursor: pointer;
+  &__text {
+    margin-bottom: 72px;
 
-    @include onMobile {
-      display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: $header-footer-text-color;
+    text-align: left;
+
+    @include on-tablet {
+      margin-bottom: 56px;
+    }
+
+    @include on-small-desktop {
+      margin-bottom: 83px;
     }
   }
 
-  &__mobile-menu-icon {
-    width: 24px;
-    height: 24px;
+  &__button {
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 147px;
+    }
+
+    @include on-small-desktop {
+      margin-bottom: 205px;
+    }
   }
 }

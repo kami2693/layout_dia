@@ -1,9 +1,25 @@
 .arrow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+
+  &--left {
+    border-radius: 50%;
+
+    background-color: #fff;
+    background-image: url(../images/slider/slide-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--right {
+    border-radius: 50%;
+
+    background-color: #fff;
+    background-image: url(../images/slider/slide-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include hover(transform, scale(1.1));
 }
