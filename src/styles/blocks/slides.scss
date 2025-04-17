@@ -1,98 +1,137 @@
-/* stylelint-disable */
 .slides {
   position: relative;
-  overflow: hidden;
   grid-column: 1 / -1;
-  height: 100vh;
-  min-height: 600px;
+  overflow: hidden;
 
-  &__container {
-    position: relative;
-    height: 100%;
+  @include on-small-desktop {
+    grid-column: 7 / 13;
   }
 
-  &__slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity $transition-base;
+  &__fade {
+    height: 390px;
+    position: relative;
+
+    @include on-small-desktop {
+      height: 100%;
+    }
   }
 
   &__image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    display: block;
     min-width: 100%;
+    width: 100%;
+    height: 390px;
     object-fit: cover;
     object-position: center;
-    border-radius: 0;
+    border-radius: 30px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include animate;
+    @include keyframes {
+      0% {
+        opacity: .4;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    /*&--gadget {
+      opacity: 0;
+    }
+
+    &--mac {
+      opacity: 0;
+    }
+
+    &--active {
+      opacity: 1;
+    }*/
+
+    @include on-small-desktop {
+      max-height: 100%;
+      height: 100%;
+      width: 100%;
+      border-radius: 30px 0;
+    }
   }
 
-  &__content {
+  &__intro {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 60px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: $color-secondary;
+    left: 10%;
+    bottom: 10%;
     z-index: 2;
+
+    @include on-small-desktop {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+
+  &__arrows {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $button-color;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $header-footer-text-color;
+
+    &:hover {
+        background-color: $button-color;
+        color: $header-footer-text-color;
+      }
   }
 
   &__title {
-    margin-bottom: 24px;
-    font-family: Poppins, sans-serif;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 1.2;
+    margin: 0 0 8px;
+    padding: 0;
+    font-size: 13px;
+    color: $header-footer-text-color;
+    font-family: 'Poppins';
+    font-weight: 700;
     text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 3px;
   }
 
-  &__description {
-    margin-bottom: 32px;
-    font-family: Poppins, sans-serif;
-    font-size: 18px;
-    line-height: 1.5;
+  &__text {
+    margin: 0 0 8px;
+    padding: 0;
+    color: $header-footer-text-color;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
   }
 
-  &__controls {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    margin: 0;
-  }
-
-  &__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    color: $color-secondary;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    transition: background-color $transition-base;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
+  &__circles {
+    margin: 2px 0;
+    gap: 8px;
   }
 
   &__dot {
-    width: 8px;
-    height: 8px;
-    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
     border-radius: 50%;
-    transition: background-color $transition-base;
+    display: inline-block;
+    transition: background-color 0.5s ease;
 
-    &--active {
-      background-color: $color-secondary;
+    &:hover, :active {
+      background-color: #717171;
     }
   }
 }
-/* stylelint-enable */

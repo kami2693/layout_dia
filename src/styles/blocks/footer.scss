@@ -1,4 +1,3 @@
-/* stylelint-disable */
 .footer {
   margin-top: 120px;
   background-color: $header-footer-text-color;
@@ -121,7 +120,7 @@
         color: $header-footer-text-color;
         text-decoration: none;
 
-        @include hover(color, $footer-hover-color);
+        @include hover (color, $footer-hover-color);
       }
     }
 
@@ -134,7 +133,7 @@
         color: $header-footer-text-color;
         text-decoration: none;
 
-        @include hover(color, $footer-hover-color);
+        @include hover (color, $footer-hover-color);
       }
     }
 
@@ -224,7 +223,7 @@
         margin-bottom: 0;
       }
 
-      @include hover(transform, scale(1.1));
+      @include hover (transform, scale(1.1));
     }
 
     &__list {
@@ -257,7 +256,7 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      @include hover(color, $footer-hover-color);
+      @include hover (color, $footer-hover-color);
     }
 
     &__item {
@@ -267,4 +266,3 @@
     }
   }
 }
-/* stylelint-enable */
